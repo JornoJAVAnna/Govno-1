@@ -1,10 +1,10 @@
-package said.team.lead.dao;
+package said.team.lead.service;
 
 import said.team.lead.entity.Employee;
 
 import java.util.List;
 
-public interface EmployeeDAO {
+public interface EmployeeService {
     public List<Employee> getAllEmployees();
 
     public void saveEmployee(Employee employee);
