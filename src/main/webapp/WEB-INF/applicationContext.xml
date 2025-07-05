@@ -29,7 +29,7 @@
         <property name="driverClass" value="org.postgresql.Driver" />
         <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/postgres" />
         <property name="user" value="postgres" />
-        <property name="password" value="Wkm8oN8t " />
+        <property name="password" value="Wkm8oN8t" />
     </bean>
 
     <bean id="sessionFactory"
