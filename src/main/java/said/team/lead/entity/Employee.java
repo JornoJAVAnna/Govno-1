@@ -9,7 +9,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
 
     @Column(name = "name")
     private String name;
@@ -21,7 +21,7 @@ public class Employee {
     private String department;
 
     @Column(name = "salary")
-    private int salary;
+    private Integer salary;
 
     public Employee() {
     }
@@ -33,11 +33,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -65,11 +65,11 @@ public class Employee {
         this.department = department;
     }
 
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(Integer salary) {
         this.salary = salary;
     }
 }

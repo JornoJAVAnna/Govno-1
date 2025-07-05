@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import said.team.lead.dao.EmployeeDAO;
 import said.team.lead.entity.Employee;
 import said.team.lead.service.EmployeeService;
@@ -43,7 +44,20 @@ public class MyController {
     }
 
     @RequestMapping("/updateInfo")
-    public String updateEmployee() {
+    public String updateEmployee(@RequestParam("empId") Integer id, Model model) {
 
+
+        Employee employee = employeeService.getEmployee(id);
+        model.addAttribute("employee", employee);
+        return "employee-info";
+
+    }
+
+    @RequestMapping("/deleteEmployee")
+    public String deleteEmployee(@RequestParam("empId") Integer id) {
+
+        employeeService.deleteEmployee(id);
+
+        return "redirect:/";
     }
 }
